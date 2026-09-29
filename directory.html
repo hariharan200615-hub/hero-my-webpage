@@ -1,0 +1,729 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Directory | HomeHero</title>
+    <meta name="description" content="Find HomeHero service professionals by service and location.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services-directory.css">
+</head>
+<body>
+    <header class="header">
+    <div class="container nav">
+        <a class="logo" href="clg.html">
+                <span class="logo__mark"><span>🏠</span></span>
+                Home<em>Hero</em>
+            </a>
+    <nav aria-label="Main navigation">
+        <ul class="nav__links">
+        <li>
+    <a href="clg.html">Home</a>
+        </li>
+        <li>
+        <a href="service.html">Services</a>
+        </li>
+        <li>
+        <a href="directory.html" class="active">
+          Service Directory
+        </a>
+        </li>
+        <li>
+        <a href="clg.html#why">Why us</a>
+        </li>
+        <li>
+            <a href="clg.html#how">How it works</a>
+        </li>
+        <li>
+           <a href="clg.html#about">About</a>
+         </li>
+        <li>
+         <a href="clg.html#faq">FAQ</a>
+        </li>
+   </ul>
+    </nav>
+            <div class="nav__cta">
+                <a class="btn btn--ghost btn--sm" href="tel:+18005551234">
+                    ☎ 1800 555 1234
+                </a>
+                <a class="btn btn--accent btn--sm" href="clg.html#booking">
+                    Book a Service
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+    <section class="directory-hero">
+        <div class="container">
+           <span class="eyebrow">
+            HomeHero Service Directory
+        </span>
+     <h1>Find the right professional for your home</h1>
+    <p>
+        Search verified HomeHero professionals by service,
+             name or location.
+    </p>
+     <div class="directory-search">
+            <div class="directory-search__field">
+        <span>🔎</span>
+     <input type="search" id="directorySearch" placeholder="Search service, professional or area..."
+                   autocomplete="off">
+        </div>
+    <div class="directory-search__field">
+        <span>📍</span>
+         <input type="text" id="locationSearch" placeholder="Location">
+        </div>
+  <button class="btn btn--accent" id="searchDirectory">
+          Search
+      </button>
+ </div>
+ </div>
+ </section>
+    <section class="section">
+<div class="container">
+<div class="directory-layout">
+<aside class="directory-filter">
+<div class="filter-box">
+    <h3>Filter services</h3>
+    <div id="serviceFilters"></div>
+</div>
+</aside>
+<div class="directory-results">
+<div class="directory-results__top">
+<div>
+    <span class="eyebrow">
+       Verified professionals
+  </span>
+ <h2>Available professionals</h2>
+ </div>
+ <span id="resultCount" class="result-count">
+        8 professionals
+  </span>
+</div>
+<div class="professional-grid" id="professionalGrid">
+    <article class="professional-card" data-service="Plumbing" data-location="Chennai Riverside"
+                    data-name="Arun Kumar">
+    <div class="professional-card__top">
+    <div class="professional-avatar">
+          AK
+  </div>
+<span class="verified">
+    ✓ Verified
+    </span>
+</div>
+ <h3>Arun Kumar</h3>
+<p class="professional-service">
+  🔧 Plumbing
+</p>
+  <div class="professional-rating">
+        ★ 4.9
+  <span>(184 reviews)</span>
+        </div>
+        <p>
+           Experienced plumbing professional for
+         household repairs and maintenance.
+         </p>
+<div class="professional-location">
+    📍 Chennai
+ </div>
+     <div class="professional-card__actions">
+  <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+     data-service="Plumbing">
+      Book Now
+ </a>
+ <button class="btn btn--ghost btn--block view-profile" data-name="Arun Kumar"
+  data-service="Plumbing" data-rating="4.9" data-location="Chennai">
+  View Profile
+    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 2 -->
+
+                            <article class="professional-card" data-service="Electrical Repairs"
+                                data-location="Chennai Riverside" data-name="Suresh Raj">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        SR
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>Suresh Raj</h3>
+
+                                <p class="professional-service">
+                                    ⚡ Electrical Repairs
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.8
+                                    <span>(152 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Household electrical repair and
+                                    installation professional.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Electrical Repairs">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile" data-name="Suresh Raj"
+                                        data-service="Electrical Repairs" data-rating="4.8" data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 3 -->
+
+                            <article class="professional-card" data-service="Home Cleaning"
+                                data-location="Chennai Adyar" data-name="Meena Cleaning Team">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        MC
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>Meena Cleaning Team</h3>
+
+                                <p class="professional-service">
+                                    🧹 Home Cleaning
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.9
+                                    <span>(216 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Home cleaning specialists for deep
+                                    cleaning and regular household cleaning.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Adyar
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Home Cleaning">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile"
+                                        data-name="Meena Cleaning Team" data-service="Home Cleaning" data-rating="4.9"
+                                        data-location="Adyar">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 4 -->
+
+                            <article class="professional-card" data-service="Painting" data-location="Chennai"
+                                data-name="Vijay Painters">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        VP
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>Vijay Painters</h3>
+
+                                <p class="professional-service">
+                                    🎨 Painting
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.7
+                                    <span>(121 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Interior and exterior painting
+                                    professionals for residential properties.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Painting">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile" data-name="Vijay Painters"
+                                        data-service="Painting" data-rating="4.7" data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 5 -->
+
+                            <article class="professional-card" data-service="Appliance Repair" data-location="Chennai"
+                                data-name="Ravi Tech">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        RT
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>Ravi Tech</h3>
+
+                                <p class="professional-service">
+                                    🔌 Appliance Repair
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.8
+                                    <span>(97 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Household appliance repair and
+                                    maintenance technician.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Appliance Repair">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile" data-name="Ravi Tech"
+                                        data-service="Appliance Repair" data-rating="4.8" data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 6 -->
+
+                            <article class="professional-card" data-service="Carpentry" data-location="Chennai"
+                                data-name="Mohan Woodworks">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        MW
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>Mohan Woodworks</h3>
+
+                                <p class="professional-service">
+                                    🪚 Carpentry
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.9
+                                    <span>(83 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Furniture, doors, shelves and general
+                                    residential carpentry.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Carpentry">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile" data-name="Mohan Woodworks"
+                                        data-service="Carpentry" data-rating="4.9" data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 7 -->
+
+                            <article class="professional-card" data-service="Pest Control" data-location="Chennai"
+                                data-name="SafeHome Pest Control">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        SH
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>SafeHome Pest Control</h3>
+
+                                <p class="professional-service">
+                                    🛡️ Pest Control
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.8
+                                    <span>(139 reviews)</span>
+                                </div>
+
+                                <p>
+                                    Household pest-control and preventive
+                                    treatment services.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="Pest Control">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile"
+                                        data-name="SafeHome Pest Control" data-service="Pest Control" data-rating="4.8"
+                                        data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- CARD 8 -->
+
+                            <article class="professional-card" data-service="AC Servicing" data-location="Chennai"
+                                data-name="CoolAir Services">
+
+                                <div class="professional-card__top">
+
+                                    <div class="professional-avatar">
+                                        CA
+                                    </div>
+
+                                    <span class="verified">
+                                        ✓ Verified
+                                    </span>
+
+                                </div>
+
+                                <h3>CoolAir Services</h3>
+
+                                <p class="professional-service">
+                                    ❄️ AC Servicing
+                                </p>
+
+                                <div class="professional-rating">
+                                    ★ 4.9
+                                    <span>(176 reviews)</span>
+                                </div>
+
+                                <p>
+                                    AC servicing, cleaning and household
+                                    cooling-system assistance.
+                                </p>
+
+                                <div class="professional-location">
+                                    📍 Chennai
+                                </div>
+
+                                <div class="professional-card__actions">
+
+                                    <a href="clg.html#booking" class="btn btn--accent btn--block directory-book"
+                                        data-service="AC Servicing">
+                                        Book Now
+                                    </a>
+
+                                    <button class="btn btn--ghost btn--block view-profile" data-name="CoolAir Services"
+                                        data-service="AC Servicing" data-rating="4.9" data-location="Chennai">
+                                        View Profile
+                                    </button>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+
+                        <!-- NO RESULTS -->
+
+                        <div id="noResults" class="no-results" hidden>
+
+                            <div>🔎</div>
+
+                            <h3>No professionals found</h3>
+
+                            <p>
+                                Try another service, professional name,
+                                or location.
+                            </p>
+
+                            <button class="btn btn--accent" id="clearFilters">
+                                Clear Filters
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="service-cta">
+
+            <div class="container">
+
+                <h2>Can't find what you're looking for?</h2>
+
+                <p>
+                    Tell us what you need and our team can help you
+                    choose the right service.
+                </p>
+
+                <a href="clg.html#booking" class="btn btn--accent">
+                    Request a Service
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= PROFILE MODAL ================= -->
+
+    <div class="profile-modal" id="profileModal" hidden>
+
+        <div class="profile-modal__overlay"></div>
+
+        <div class="profile-modal__box" role="dialog" aria-modal="true" aria-labelledby="profileName">
+
+            <button class="profile-modal__close" id="closeProfile" aria-label="Close">
+                ×
+            </button>
+
+            <div class="professional-avatar professional-avatar--large" id="profileAvatar">
+                HH
+            </div>
+
+            <span class="verified">
+                ✓ Verified HomeHero Professional
+            </span>
+
+            <h2 id="profileName">Professional</h2>
+
+            <p class="professional-service" id="profileService">
+                Service
+            </p>
+
+            <div class="professional-rating" id="profileRating">
+                ★ 4.9
+            </div>
+
+            <p id="profileLocation">
+                📍 Chennai
+            </p>
+
+            <p>
+                This professional is available through
+                HomeHero for the selected service.
+            </p>
+
+            <a href="clg.html#booking" class="btn btn--accent btn--block" id="modalBook">
+                Book This Professional
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__grid">
+
+                <div>
+
+                    <div class="logo">
+                        <span class="logo__mark"><span>🏠</span></span>
+                        Home<em>Hero</em>
+                    </div>
+
+                    <p>
+                        Verified home service professionals for your
+                        everyday home needs.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Quick links</h4>
+
+                    <ul>
+                        <li><a href="clg.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="directory.html">Directory</a></li>
+                        <li><a href="clg.html#booking">Book a Service</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Services</h4>
+
+                    <ul>
+                        <li>Plumbing</li>
+                        <li>Electrical Repairs</li>
+                        <li>Home Cleaning</li>
+                        <li>Painting</li>
+                        <li>AC Servicing</li>
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Contact</h4>
+
+                    <ul>
+                        <li>☎ 1800 555 1234</li>
+                        <li>✉ hello@homehero.example</li>
+                        <li>📍 44 Maple Street, Riverside</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+
+                <span>
+                    © <span id="directoryYear"></span>
+                    HomeHero Services.
+                    All rights reserved.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const homeUrl = "college%20project.html";
+        document.querySelectorAll('a[href="clg.html"]').forEach((link) => {
+          link.href = homeUrl;
+        });
+        document.querySelectorAll('a[href="clg.html#booking"]').forEach((link) => {
+          const service = link.dataset.service ? `?service=${encodeURIComponent(link.dataset.service)}#booking` : "#booking";
+          link.href = `${homeUrl}${service}`;
+        });
+        document.querySelectorAll('a[href="clg.html#why"], a[href="clg.html#how"], a[href="clg.html#about"], a[href="clg.html#faq"]').forEach((link) => {
+          const hash = link.getAttribute("href").split("#")[1];
+          link.href = `${homeUrl}#${hash}`;
+        });
+      });
+    </script>
+
+    <script src="services.js"></script>
+    <script src="services-directory.js"></script>
+
+</body>
+
+</html>

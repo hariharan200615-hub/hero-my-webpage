@@ -1,0 +1,93 @@
+booking    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed | HomeHero</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .confirmation {
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+    .icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .message {
+      color: #555;
+      line-height: 1.6;
+    }
+    .booking-details {
+      margin-top: 25px;
+      padding: 20px;
+      background: #f5f7fa;
+      border-radius: 10px;
+      text-align: left;
+    }
+    .booking-details p {
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="confirmation">
+    <div class="icon">✓</div>
+    <h1>Booking Confirmed!</h1>
+    <p class="message">
+      Your service booking has been successfully submitted.
+      Our team will contact you shortly to confirm the appointment.
+    </p>
+    <div class="booking-details">
+      <p><strong>Name:</strong> <span id="bookingName"></span></p>
+      <p><strong>Service:</strong> <span id="bookingService"></span></p>
+      <p><strong>Date:</strong> <span id="bookingDate"></span></p>
+      <p><strong>Address:</strong> <span id="bookingAddress"></span></p>
+    </div>
+    <a href="college%20project.html" class="btn">Back to Home</a>
+  </div>
+  <script>
+    const bookingData = JSON.parse(
+      localStorage.getItem("homeHeroBooking")
+    );
+    if (bookingData) {
+      document.getElementById("bookingName").textContent =
+        bookingData.name;
+      document.getElementById("bookingService").textContent =
+        bookingData.service;
+      document.getElementById("bookingDate").textContent =
+        bookingData.date;
+      document.getElementById("bookingAddress").textContent =
+        bookingData.address;
+    }
+  </script>
+</body>
+</html>
