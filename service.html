@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | HomeHero</title>
+  <meta name="description"
+  content="Explore HomeHero home services including plumbing, electrical, cleaning, painting, appliance repair, carpentry, pest control and AC servicing.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services-directory.css">
+</head>
+<body>  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="clg.html">
+        <span class="logo__mark"><span>🏠</span></span>
+        Home<em>Hero</em>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav__links">
+          <li><a href="clg.html">Home</a></li>
+          <li><a href="service.html" class="active">Services</a></li>
+          <li><a href="directory.html">Service Directory</a></li>
+          <li><a href="clg.html#why">Why us</a></li>
+          <li><a href="clg.html#how">How it works</a></li>
+          <li><a href="clg.html#about">About</a></li>
+          <li><a href="clg.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--ghost btn--sm" href="tel:+18005551234">
+          ☎ 1800 555 1234
+        </a>
+        <a class="btn btn--accent btn--sm" href="clg.html#booking">
+          Book a Service
+        </a>
+      </div>
+
+    </div>
+</header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">HomeHero Services</span>
+        <h1>Everything your home needs</h1>
+        <p>
+          Find trusted professionals for plumbing, electrical repairs,
+          cleaning, painting, appliance repair and more.
+        </p>
+        <div class="page-hero__buttons">
+          <a href="#all-services" class="btn btn--accent">
+            Explore Services
+          </a>
+          <a href="directory.html" class="btn btn--ghost">
+            Find a Professional
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="all-services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our services</span>
+          <h2>Professional services for every home</h2>
+          <p>
+            Choose a service and book a verified HomeHero professional.
+          </p>
+        </div>
+        <div class="service-page-grid" data-service-cards="detailed"></div>
+      </div>
+    </section>
+    <section class="service-cta">
+      <div class="container">
+        <h2>Not sure which service you need?</h2>
+        <p>
+          Browse our Service Directory and find a professional
+          who can help with your home requirement.
+        </p>
+        <a href="directory.html" class="btn btn--accent">
+          Open Service Directory
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="logo">
+            <span class="logo__mark"><span>🏠</span></span>
+            Home<em>Hero</em>
+          </div>
+          <p>
+            Verified home service professionals for plumbing,
+            electrical, cleaning, painting and more.
+          </p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="clg.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="directory.html">Service Directory</a></li>
+            <li><a href="clg.html#booking">Book a Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#all-services">Plumbing</a></li>
+            <li><a href="#all-services">Electrical</a></li>
+            <li><a href="#all-services">Cleaning</a></li>
+            <li><a href="#all-services">Painting</a></li>
+            <li><a href="#all-services">AC Servicing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>☎ 1800 555 1234</li>
+            <li>✉ hello@homehero.example</li>
+            <li>📍 44 Maple Street, Riverside</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>
+          © <span id="year"></span> HomeHero Services.
+          All rights reserved.
+        </span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const homeUrl = "collegeproject.html.html";
+      document.querySelectorAll('a[href="clg.html"]').forEach((link) => {
+        link.href = homeUrl;
+      });
+      document.querySelectorAll('a[href="clg.html#booking"]').forEach((link) => {
+        const service = link.dataset.service ? `?service=${encodeURIComponent(link.dataset.service)}#booking` : "#booking";
+        link.href = `${homeUrl}${service}`;
+      });
+      document.querySelectorAll('a[href="clg.html#why"], a[href="clg.html#how"], a[href="clg.html#about"], a[href="clg.html#faq"]').forEach((link) => {
+        const hash = link.getAttribute("href").split("#")[1];
+        link.href = `${homeUrl}#${hash}`;
+      });
+    });
+  </script>
+  <script src="services.js"></script>
+  <script src="services-directory.js"></script>
+</body>
+</html>
